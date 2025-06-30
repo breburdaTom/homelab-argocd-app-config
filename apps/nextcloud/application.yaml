@@ -1,22 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: statping-ng
+  name: nextcloud
   namespace: argocd
 spec:
   project: default
+
   source:
-    repoURL: 'https://github.com/breburdaTom/homelab-argocd-app-config.git'
+    repoURL: https://github.com/breburdaTom/homelab-argocd-app-config.git 
     targetRevision: HEAD
-    path: apps/statping
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: statping
+    path: Charts/nextcloud
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: nextcloud
+
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
-    automated:
-      prune: true
-      selfHeal: true
-        
 
+    automated:
+      selfHeal: true
+      prune: true
