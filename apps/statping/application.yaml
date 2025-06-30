@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: statping-ng
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/breburdaTom/homelab-argocd-app-config.git'
+    targetRevision: HEAD
+    path: statping-ng
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: statping
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
+        
+
