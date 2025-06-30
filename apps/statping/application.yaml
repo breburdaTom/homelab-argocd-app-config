@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/breburdaTom/homelab-argocd-app-config.git'
     targetRevision: HEAD
-    path: statping-ng
+    path: apps/statping
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: statping
