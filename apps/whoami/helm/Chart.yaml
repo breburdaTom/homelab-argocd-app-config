@@ -1,5 +1,0 @@
-apiVersion: v2
-name: whoami
-version: 0.1.0
-description: A minimal Helm chart deploying bitnami/whoami container
-
