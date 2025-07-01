@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: cowboysysop/whoami
-  tag: 5.3.0
+  tag: v1.11.0
   pullPolicy: IfNotPresent
 
 service:
